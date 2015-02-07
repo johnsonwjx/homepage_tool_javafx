@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane hgap="5.0" vgap="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="youngfriend.main.Main_Controller">
+
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="236.0" minWidth="10.0" prefWidth="102.0" />
+        <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="456.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="125.0" minWidth="10.0" prefWidth="92.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <TextField fx:id="title" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label text="操作按钮" GridPane.rowIndex="2">
+            <padding>
+                <Insets left="5.0" />
+            </padding>
+        </Label>
+        <TableView fx:id="btns" editable="true" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.rowSpan="5">
+            <columns>
+            <TableColumn fx:id="btns_name" prefWidth="75.0" text="按钮名称" />
+            <TableColumn fx:id="btns_url" prefWidth="75.0" text="url" />
+                <TableColumn fx:id="btns_privilege" prefWidth="75.0" sortable="false" text="权限" />
+            </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+        </TableView>
+      <VBox alignment="CENTER" spacing="5.0" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.rowSpan="4">
+         <children>
+                <Button layoutX="74.0" mnemonicParsing="false" onAction="#btns_add" text="增加" />
+                <Button mnemonicParsing="false" onAction="#btns_del" text="删除" />
+            <Button mnemonicParsing="false" text="权限" />
+         </children>
+      </VBox>
+        <Label text="标题" GridPane.rowIndex="1">
+            <padding>
+                <Insets left="5.0" />
+            </padding>
+        </Label>
+        <Label text="左边面板" GridPane.rowIndex="7">
+            <padding>
+                <Insets left="5.0" />
+            </padding>
+        </Label>
+        <TableView fx:id="tabs_left" editable="true" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" GridPane.rowSpan="5">
+            <columns>
+                <TableColumn fx:id="tabs_left_type" prefWidth="75.0" text="类型" />
+            <TableColumn fx:id="tabs_left_logo" prefWidth="75.0" text="标题logo" />
+            <TableColumn fx:id="tabs_left_height" onEditStart="#tabs_left_height_commit" prefWidth="75.0" text="高度" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+      <VBox alignment="CENTER" spacing="5.0" GridPane.columnIndex="2" GridPane.rowIndex="7" GridPane.rowSpan="4">
+         <children>
+                <Button mnemonicParsing="false" onAction="#tabs_left_add" text="增加" />
+                <Button mnemonicParsing="false" onAction="#tabs_left_del" text="删除" />
+            <Button mnemonicParsing="false" onAction="#tabs_left_logo_select" text="标题logo" />
+         </children>
+      </VBox>
+        <Label text="右边边面板" GridPane.rowIndex="12">
+            <padding>
+                <Insets left="5.0" />
+            </padding>
+        </Label>
+        <TableView fx:id="tabs_right" editable="true" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="12" GridPane.rowSpan="4">
+            <columns>
+                <TableColumn fx:id="tabs_right_type" onEditCommit="#tabs_right_type_change" prefWidth="75.0" text="类型" />
+                <TableColumn fx:id="tabs_right_title" prefWidth="75.0" text="标题" />
+            <TableColumn fx:id="tabs_right_height" onEditCommit="#tabs_right_height_commit" prefWidth="75.0" text="高度" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+      <VBox alignment="CENTER" spacing="5.0" GridPane.columnIndex="2" GridPane.rowIndex="12" GridPane.rowSpan="4">
+         <children>
+                <Button mnemonicParsing="false" onAction="#tabs_right_add" text="增加" />
+                <Button mnemonicParsing="false" onAction="#tabs_right_del" text="删除" />
+         </children>
+      </VBox>
+    </children>
+</GridPane>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/src/youngfriend/APP.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/youngfriend/App_Controller.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/youngfriend/app/WorkSpace_Controller.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/youngfriend/app/WorkspaceDialog.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/youngfriend/bean_table_base/Bean_Service.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/youngfriend/bean_table_base/Bean_Utils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/youngfriend/header/Header.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/youngfriend/header/Header_Controller.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/youngfriend/header/nav/Nav.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/youngfriend/header/nav/Nav_Observable.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/youngfriend/header/nav/Nav_Service.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/youngfriend/header/nav/Nav_Service_Sub.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/youngfriend/main/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/youngfriend/main/btn/Btn.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/youngfriend/main/btn/Btn_Observable.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/youngfriend/main/btn/Btn_Service.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/youngfriend/main/btn/Btn_ServiceSub.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/youngfriend/main/tab/TabBean.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/youngfriend/main/tab/TabBean_Observable.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/youngfriend/main/tab/TabBean_Service.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/youngfriend/main/tab/TabBean_ServiceSub.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/youngfriend/template/TemplateCreator.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/youngfriend/txt/TxtBean.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/youngfriend/txt/TxtBean_Observable.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/youngfriend/txt/TxtBean_Service.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/youngfriend/txt/TxtBean_Service_Sub.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/youngfriend/txt/TxtBean_util.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/youngfriend/util/Controller.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/youngfriend/util/ExceptionDialog.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/youngfriend/util/Map_Utils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/youngfriend/util/Name_Pair.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/youngfriend/util/PropTableCell.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/youngfriend/util/Utils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test/AppTest.java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,15 @@
+.body {
+
+}
+
+.header{
+    -fx-background-color: gray;
+}
+
+.main{
+    -fx-background-color: cornsilk;
+}
+
+.bottom{
+    -fx-background-color: gray;
+}

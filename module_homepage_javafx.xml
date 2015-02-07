@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_homepage_javafx" default="compile.module.homepage_javafx">
+  <dirname property="module.homepage_javafx.basedir" file="${ant.file.module_homepage_javafx}"/>
+  
+  
+  <property name="compiler.args.homepage_javafx" value="-encoding UTF-8 -source 8 ${compiler.args}"/>
+  
+  <property name="homepage_javafx.output.dir" value="${module.homepage_javafx.basedir}/out/production/homepage_javafx"/>
+  <property name="homepage_javafx.testoutput.dir" value="${module.homepage_javafx.basedir}/out/test/homepage_javafx"/>
+  
+  <path id="homepage_javafx.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="homepage_javafx.module.production.classpath">
+    <fileset dir="${basedir}/lib">
+      <patternset refid="library.patterns"/>
+    </fileset>
+  </path>
+  
+  <path id="homepage_javafx.runtime.production.module.classpath">
+    <pathelement location="${homepage_javafx.output.dir}"/>
+    <fileset dir="${basedir}/lib">
+      <patternset refid="library.patterns"/>
+    </fileset>
+  </path>
+  
+  <path id="homepage_javafx.module.classpath">
+    <pathelement location="${homepage_javafx.output.dir}"/>
+    <fileset dir="${basedir}/lib">
+      <patternset refid="library.patterns"/>
+    </fileset>
+  </path>
+  
+  <path id="homepage_javafx.runtime.module.classpath">
+    <pathelement location="${homepage_javafx.testoutput.dir}"/>
+    <pathelement location="${homepage_javafx.output.dir}"/>
+    <fileset dir="${basedir}/lib">
+      <patternset refid="library.patterns"/>
+    </fileset>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.homepage_javafx">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.homepage_javafx">
+    <patternset refid="excluded.from.module.homepage_javafx"/>
+  </patternset>
+  
+  <path id="homepage_javafx.module.sourcepath">
+    <dirset dir="${module.homepage_javafx.basedir}">
+      <include name="src"/>
+      <include name="resources"/>
+    </dirset>
+  </path>
+  
+  <path id="homepage_javafx.module.test.sourcepath">
+    <dirset dir="${module.homepage_javafx.basedir}">
+      <include name="test"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.homepage_javafx" depends="compile.module.homepage_javafx.production,compile.module.homepage_javafx.tests" description="Compile module homepage_javafx"/>
+  
+  <target name="compile.module.homepage_javafx.production" description="Compile module homepage_javafx; production classes">
+    <mkdir dir="${homepage_javafx.output.dir}"/>
+    <javac destdir="${homepage_javafx.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true">
+      <compilerarg line="${compiler.args.homepage_javafx}"/>
+      <bootclasspath refid="homepage_javafx.module.bootclasspath"/>
+      <classpath refid="homepage_javafx.module.production.classpath"/>
+      <src refid="homepage_javafx.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.homepage_javafx"/>
+    </javac>
+    
+    <copy todir="${homepage_javafx.output.dir}">
+      <fileset dir="${module.homepage_javafx.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.homepage_javafx.basedir}/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+    <copydir dest="${basedir}/out/production/config" src="config"/>
+  </target>
+  
+  <target name="compile.module.homepage_javafx.tests" depends="compile.module.homepage_javafx.production" description="compile module homepage_javafx; test classes" unless="skip.tests">
+    <mkdir dir="${homepage_javafx.testoutput.dir}"/>
+    <javac destdir="${homepage_javafx.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true">
+      <compilerarg line="${compiler.args.homepage_javafx}"/>
+      <bootclasspath refid="homepage_javafx.module.bootclasspath"/>
+      <classpath refid="homepage_javafx.module.classpath"/>
+      <src refid="homepage_javafx.module.test.sourcepath"/>
+      <patternset refid="excluded.from.compilation.homepage_javafx"/>
+    </javac>
+    
+    <copy todir="${homepage_javafx.testoutput.dir}">
+      <fileset dir="${module.homepage_javafx.basedir}/test">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="clean.module.homepage_javafx" description="cleanup module">
+    <delete dir="${homepage_javafx.output.dir}"/>
+    <delete dir="${homepage_javafx.testoutput.dir}"/>
+  </target>
+</project>

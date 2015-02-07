@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+ <dict>
+  <key>LSMinimumSystemVersion</key>
+  <string>10.7.4</string>
+  <key>CFBundleDevelopmentRegion</key>
+  <string>English</string>
+  <key>CFBundleAllowMixedLocalizations</key>
+  <true/>
+  <key>CFBundleExecutable</key>
+  <string>homepage</string>
+  <key>CFBundleIconFile</key>
+  <string>homepage.icns</string>
+  <key>CFBundleIdentifier</key>
+  <string>youngfriend</string>
+  <key>CFBundleInfoDictionaryVersion</key>
+  <string>6.0</string>
+  <key>CFBundleName</key>
+  <string>homepage</string>
+  <key>CFBundlePackageType</key>
+  <string>APPL</string>
+  <key>CFBundleShortVersionString</key>
+  <string>1.0</string>
+  <key>CFBundleSignature</key>
+  <string>Ô¶·½</string>
+  <!-- See http://developer.apple.com/library/mac/#releasenotes/General/SubmittingToMacAppStore/_index.html
+       for list of AppStore categories -->
+  <key>LSApplicationCategoryType</key>
+  <string>Unknown</string>
+  <key>CFBundleVersion</key>
+  <string>100</string>
+  <key>NSHumanReadableCopyright</key>
+  <string>Copyright (C) 2015</string>
+  <key>JVMRuntime</key>
+  <string>jdk1.8.0_25.jdk</string>
+  <key>JVMMainClassName</key>
+  <string>youngfriend.APP</string>
+  <key>JVMAppClasspath</key>
+   <string>lib/openjfx-dialogs-1.0.2.jar</string>
+  <key>JVMMainJarName</key>
+  <string>JavaFXApp.jar</string>
+  <key>JVMPreferencesID</key>
+  <string>youngfriend</string>
+  <key>JVMOptions</key>
+  <array>
+  </array>
+  <key>JVMUserOptions</key>
+    <dict>
+    </dict>
+  <key>NSHighResolutionCapable</key>
+  <string>true</string>
+ </dict>
+</plist>
